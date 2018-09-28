@@ -7,9 +7,10 @@ target 'petBuddy' do
 
   # Pods for petBuddy
 
-pod 'Firebase/Core'
+pod 'Firebase'
 pod 'Firebase/Database'
 pod 'Firebase/Auth'
-pod 'SwiftKeychainWrapper'
+pod 'SVProgressHUD'
+pod 'ChameleonFramework'
 
 end
