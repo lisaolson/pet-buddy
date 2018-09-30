@@ -10,20 +10,18 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         emailField.delegate = self
         passwordField.delegate = self
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func closeButtonPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    
-    @IBOutlet weak var emailField: UITextField!
-    
-    @IBOutlet weak var passwordField: UITextField!
     
     @IBAction func loginButtonPressed(_ sender: Any) {
         if emailField.text != nil && passwordField.text != nil {
@@ -36,6 +34,7 @@ class LoginViewController: UIViewController {
                 AuthService.instance.registerUser(withEmail: self.emailField.text!, andPassword: self.passwordField.text!, userCreateComplete: { (success, registrationError) in
                     if success {
                         AuthService.instance.loginUser(withEmail: self.emailField.text!, andPassword: self.passwordField.text!, userLoginComplete: { (success, nil) in
+                            self.dismiss(animated: true, completion: nil)
                             print("Successfully registered user")
                         })
                     } else {

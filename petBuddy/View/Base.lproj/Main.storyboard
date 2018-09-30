@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rac-vl-6fh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Auth View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="AuthVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="petBuddy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuthViewController" id="BYZ-38-t0r" customClass="AuthViewController" customModule="petBuddy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,7 +31,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="logInWithFBPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fGb-hi-guL"/>
+                                                    <action selector="facebookLoginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BIP-Fw-c8z"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBP-Qi-025">
@@ -42,7 +42,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="logInWithGooglePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ItI-ao-I7b"/>
+                                                    <action selector="googleLoginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NnM-DP-Sut"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qP0-cJ-3Zs">
@@ -59,7 +59,7 @@
                                                     <color key="titleColor" red="0.56347881929999999" green="0.52986852380000005" blue="0.73826433280000003" alpha="0.80056720889999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="logInWithEmailPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MCF-bQ-ZTy"/>
+                                                    <action selector="emailLoginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eog-k0-mpo"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -116,7 +116,7 @@
         <!--Login View Controller-->
         <scene sceneID="Gyo-IF-ZOg">
             <objects>
-                <viewController id="anF-2a-AtW" customClass="LoginViewController" customModule="petBuddy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="anF-2a-AtW" customClass="LoginViewController" customModule="petBuddy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yrF-HS-SAd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -155,7 +155,7 @@
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="oOW-9k-KiH"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="23"/>
-                                        <state key="normal" title="Sign In"/>
+                                        <state key="normal" title="Log In"/>
                                         <connections>
                                             <action selector="loginButtonPressed:" destination="anF-2a-AtW" eventType="touchUpInside" id="ecV-PN-5ck"/>
                                         </connections>
@@ -175,13 +175,13 @@
                         <viewLayoutGuide key="safeArea" id="laC-1e-WL1"/>
                     </view>
                     <connections>
-                        <outlet property="emailField" destination="MD2-bF-M2r" id="d0C-RU-CVQ"/>
-                        <outlet property="passwordField" destination="LhY-Tx-BQ6" id="JLZ-se-ljN"/>
+                        <outlet property="emailField" destination="MD2-bF-M2r" id="KJb-1C-HqL"/>
+                        <outlet property="passwordField" destination="LhY-Tx-BQ6" id="P7M-PH-Ck2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NG2-LO-0tj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="72.799999999999997" y="1181.5592203898052"/>
+            <point key="canvasLocation" x="-14" y="1182"/>
         </scene>
         <!--Groups-->
         <scene sceneID="erC-6O-UxE">
