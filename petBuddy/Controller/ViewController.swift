@@ -10,27 +10,21 @@ import UIKit
 import Firebase
 
 class ViewController: UIViewController {
-    
-    @IBAction func goToLoginPage(_ sender: Any) {
-        performSegue(withIdentifier: "goToLogin", sender: self)
-    }
 
-    @IBAction func goToRegisterPage(_ sender: Any) {
-        performSegue(withIdentifier: "goToRegister", sender: self)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if Auth.auth().currentUser != nil {
-            performSegue(withIdentifier: "goToChat", sender: self)
-        }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    @IBAction func logInWithGooglePressed(_ sender: Any) {
     }
     
+    @IBAction func logInWithFBPressed(_ sender: Any) {
+    }
+    
+    @IBAction func logInWithEmailPressed(_ sender: Any) {
+        let loginVC = storyboard?.instantiateViewController(withIdentifier: "loginVC")
+        present(loginVC!, animated: true, completion: nil)
+    }
     
 }
 
