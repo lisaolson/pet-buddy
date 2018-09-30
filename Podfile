@@ -8,6 +8,7 @@ target 'petBuddy' do
   # Pods for petBuddy
 
 pod 'Firebase'
+pod 'Firebase/Core'
 pod 'Firebase/Database'
 pod 'Firebase/Auth'
 pod 'SVProgressHUD'
