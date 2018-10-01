@@ -38,4 +38,25 @@ class DataService {
     func createDBUser(uid: String, userData: Dictionary<String, Any>) {
         REF_USERS.child(uid).updateChildValues(userData)
     }
+    
+    // Get all Doggos and Display
+    func getAllDoggos(handler: @escaping (_ doggo: [Doggo]) -> ()) {
+        var doggoArray = [Doggo]()
+        REF_FEED.observeSingleEvent(of: .value) { (feedDoggoSnapshot) in
+        guard let feedDoggoSnapshot = feedDoggoSnapshot.children.allObjects as? [DataSnapshot] else { return }
+            
+            for doggo in feedDoggoSnapshot {
+                let name = doggo.childSnapshot(forPath: "name").value as! String
+                let age = doggo.childSnapshot(forPath: "age").value as! String
+                let pic = doggo.childSnapshot(forPath: "pic").value as! UIImage
+                let description = doggo.childSnapshot(forPath: "description").value as! String
+                let distance = doggo.childSnapshot(forPath: "distance").value as! String
+                let senderId = doggo.childSnapshot(forPath: "senderId").value as! String
+                let doggo = Doggo(name: name, age: age, pic: pic, description: description, distance: distance, senderId: senderId)
+                doggoArray.append(doggo)
+            }
+            
+            handler(doggoArray)
+        }
+    }
 }

@@ -19,6 +19,8 @@
 		49A5F00421604355000D77C1 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A5F00321604355000D77C1 /* AuthService.swift */; };
 		49A5F0062160504C000D77C1 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A5F0052160504C000D77C1 /* FeedViewController.swift */; };
 		49A5F00821605058000D77C1 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A5F00721605058000D77C1 /* GroupsViewController.swift */; };
+		49B696CC2161CD4D00E80566 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B696CB2161CD4D00E80566 /* MeViewController.swift */; };
+		49B696CE2162B92100E80566 /* DoggoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B696CD2162B92100E80566 /* DoggoCell.swift */; };
 		49E27911215EDE260090D9CE /* Doggo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E27910215EDE260090D9CE /* Doggo.swift */; };
 		49E27913215F25180090D9CE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E27912215F25180090D9CE /* User.swift */; };
 /* End PBXBuildFile section */
@@ -38,6 +40,8 @@
 		49A5F00321604355000D77C1 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		49A5F0052160504C000D77C1 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		49A5F00721605058000D77C1 /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
+		49B696CB2161CD4D00E80566 /* MeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		49B696CD2162B92100E80566 /* DoggoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoggoCell.swift; sourceTree = "<group>"; };
 		49E27910215EDE260090D9CE /* Doggo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doggo.swift; sourceTree = "<group>"; };
 		49E27912215F25180090D9CE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		505486C1C08DD880B8C6051F /* Pods-petBuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petBuddy.release.xcconfig"; path = "Pods/Target Support Files/Pods-petBuddy/Pods-petBuddy.release.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +114,7 @@
 				4934BEA5215D5FA0009DD717 /* Main.storyboard */,
 				4934BEA8215D5FA2009DD717 /* Assets.xcassets */,
 				4934BEAA215D5FA2009DD717 /* LaunchScreen.storyboard */,
+				49B696CD2162B92100E80566 /* DoggoCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 				49A5F00721605058000D77C1 /* GroupsViewController.swift */,
 				4921760D216072C700172CF0 /* LoginViewController.swift */,
 				49285A6221616CFD0025A159 /* AuthViewController.swift */,
+				49B696CB2161CD4D00E80566 /* MeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -283,10 +289,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49B696CC2161CD4D00E80566 /* MeViewController.swift in Sources */,
 				4921760E216072C700172CF0 /* LoginViewController.swift in Sources */,
 				49E27911215EDE260090D9CE /* Doggo.swift in Sources */,
 				49285A6321616CFD0025A159 /* AuthViewController.swift in Sources */,
 				4934BEA2215D5FA0009DD717 /* AppDelegate.swift in Sources */,
+				49B696CE2162B92100E80566 /* DoggoCell.swift in Sources */,
 				49A5F00421604355000D77C1 /* AuthService.swift in Sources */,
 				49A5F00821605058000D77C1 /* GroupsViewController.swift in Sources */,
 				49E27913215F25180090D9CE /* User.swift in Sources */,
