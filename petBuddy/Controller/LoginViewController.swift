@@ -27,7 +27,8 @@ class LoginViewController: UIViewController {
         if emailField.text != nil && passwordField.text != nil {
             AuthService.instance.loginUser(withEmail: emailField.text!, andPassword: passwordField.text!, loginComplete: { (success, loginError) in
                 if success {
-                    print("successfully logged in user")
+                    self.dismiss(animated: true, completion: nil)
+                    print("!!!! SUCCESSFULLY LOGGED IN USER !!!! ")
                 } else {
                     print(String(describing: loginError?.localizedDescription))
                 }
@@ -35,10 +36,10 @@ class LoginViewController: UIViewController {
                 AuthService.instance.registerUser(withEmail: self.emailField.text!, andPassword: self.passwordField.text!, userCreationComplete: { (success, registrationError) in
                     if success {
                         AuthService.instance.loginUser(withEmail: self.emailField.text!, andPassword: self.passwordField.text!, loginComplete: { (success, nil) in
-                            print("Successfully registered user")
+                            self.dismiss(animated: true, completion: nil)
+                            print("!!!! SUCCESSFULLY REGISTERED USER !!!!")
                         })
                     } else {
-                        self.dismiss(animated: true, completion: nil)
                         print(String(describing: registrationError?.localizedDescription))
                     }
                 })
@@ -46,5 +47,6 @@ class LoginViewController: UIViewController {
         }
     }
 }
-    extension LoginViewController: UITextFieldDelegate {}
+
+    extension LoginViewController: UITextFieldDelegate { }
 
