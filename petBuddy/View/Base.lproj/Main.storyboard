@@ -173,6 +173,7 @@
                     <connections>
                         <outlet property="emailField" destination="MD2-bF-M2r" id="KJb-1C-HqL"/>
                         <outlet property="passwordField" destination="LhY-Tx-BQ6" id="P7M-PH-Ck2"/>
+                        <segue destination="rac-vl-6fh" kind="show" identifier="goToFeed" id="Ze5-qp-cWp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NG2-LO-0tj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -530,7 +531,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="BUD-AI-OQM">
             <objects>
-                <tabBarController id="rac-vl-6fh" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" id="rac-vl-6fh" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8i3-4L-lI9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

@@ -24,10 +24,15 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonPressed(_ sender: Any) {
+        var tabBar = self.storyboard?.instantiateViewController(withIdentifier: "tabBar") as! UITabBarController
+        
+        var appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
         if emailField.text != nil && passwordField.text != nil {
             AuthService.instance.loginUser(withEmail: emailField.text!, andPassword: passwordField.text!, loginComplete: { (success, loginError) in
                 if success {
                     self.dismiss(animated: true, completion: nil)
+                    appDelegate.window?.rootViewController = tabBar
                     print("!!!! SUCCESSFULLY LOGGED IN USER !!!! ")
                 } else {
                     print(String(describing: loginError?.localizedDescription))
@@ -37,6 +42,7 @@ class LoginViewController: UIViewController {
                     if success {
                         AuthService.instance.loginUser(withEmail: self.emailField.text!, andPassword: self.passwordField.text!, loginComplete: { (success, nil) in
                             self.dismiss(animated: true, completion: nil)
+                            appDelegate.window?.rootViewController = tabBar
                             print("!!!! SUCCESSFULLY REGISTERED USER !!!!")
                         })
                     } else {
