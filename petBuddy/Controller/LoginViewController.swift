@@ -25,19 +25,20 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonPressed(_ sender: Any) {
         if emailField.text != nil && passwordField.text != nil {
-            AuthService.instance.loginUser(withEmail: emailField.text!, andPassword: passwordField.text!, userLoginComplete: { (success, loginError) in
+            AuthService.instance.loginUser(withEmail: emailField.text!, andPassword: passwordField.text!, loginComplete: { (success, loginError) in
                 if success {
-                    self.dismiss(animated: true, completion: nil)
+                    print("successfully logged in user")
                 } else {
                     print(String(describing: loginError?.localizedDescription))
                 }
-                AuthService.instance.registerUser(withEmail: self.emailField.text!, andPassword: self.passwordField.text!, userCreateComplete: { (success, registrationError) in
+                
+                AuthService.instance.registerUser(withEmail: self.emailField.text!, andPassword: self.passwordField.text!, userCreationComplete: { (success, registrationError) in
                     if success {
-                        AuthService.instance.loginUser(withEmail: self.emailField.text!, andPassword: self.passwordField.text!, userLoginComplete: { (success, nil) in
-                            self.dismiss(animated: true, completion: nil)
+                        AuthService.instance.loginUser(withEmail: self.emailField.text!, andPassword: self.passwordField.text!, loginComplete: { (success, nil) in
                             print("Successfully registered user")
                         })
                     } else {
+                        self.dismiss(animated: true, completion: nil)
                         print(String(describing: registrationError?.localizedDescription))
                     }
                 })

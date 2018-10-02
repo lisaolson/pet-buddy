@@ -39,6 +39,16 @@ class DataService {
         REF_USERS.child(uid).updateChildValues(userData)
     }
     
+    // Create Doggo Post
+    func uploadDoggo(withMessage message: String, forUID uid: String, withGroupKey groupKey: String?, sendComplete: @escaping (_ status: Bool) -> ()) {
+        if groupKey != nil {
+            // send to groups reference
+        } else {
+            REF_FEED.childByAutoId().updateChildValues(["content": message, "senderId": uid])
+            sendComplete(true)
+        }
+    }
+    
     // Get all Doggos and Display
     func getAllDoggos(handler: @escaping (_ doggo: [Doggo]) -> ()) {
         var doggoArray = [Doggo]()
@@ -46,13 +56,9 @@ class DataService {
         guard let feedDoggoSnapshot = feedDoggoSnapshot.children.allObjects as? [DataSnapshot] else { return }
             
             for doggo in feedDoggoSnapshot {
-                let name = doggo.childSnapshot(forPath: "name").value as! String
-                let age = doggo.childSnapshot(forPath: "age").value as! String
-                let pic = doggo.childSnapshot(forPath: "pic").value as! UIImage
-                let description = doggo.childSnapshot(forPath: "description").value as! String
-                let distance = doggo.childSnapshot(forPath: "distance").value as! String
+                let content = doggo.childSnapshot(forPath: "content").value as! String
                 let senderId = doggo.childSnapshot(forPath: "senderId").value as! String
-                let doggo = Doggo(name: name, age: age, pic: pic, description: description, distance: distance, senderId: senderId)
+                let doggo = Doggo(content: content, senderId: senderId)
                 doggoArray.append(doggo)
             }
             

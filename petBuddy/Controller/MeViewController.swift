@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class MeViewController: UIViewController {
 
@@ -16,12 +17,16 @@ class MeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBOutlet weak var profileImage: UIImageView!
-    @IBOutlet weak var name: UILabel!
-    
     @IBAction func logoutButtonPressed(_ sender: Any) {
-        
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            print("!! SUCCESSFULLY LOGGED OUT !!")
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
     }
+    
     
     
 }
