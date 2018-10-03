@@ -48,4 +48,23 @@ class DataService {
         }
     }
     
+    func getAllFeedMessages(handler: @escaping (_ messages: [Message]) -> ()) {
+        var messageArray = [Message]()
+        
+        REF_FEED.observeSingleEvent(of: .value) { (feedMessageSnapshot) in
+            guard let feedMessageSnapshot = feedMessageSnapshot.children.allObjects as? [DataSnapshot] else { return }
+        
+            // pulls content out of Data Snapshot from Firebase Database
+            for message in feedMessageSnapshot {
+                let content = message.childSnapshot(forPath: "content").value as! String
+                let senderId = message.childSnapshot(forPath: "senderId").value as! String
+                // instantiates message
+                let message = Message(content: content, senderId: senderId)
+                messageArray.append(message)
+            }
+            
+            handler(messageArray)
+        }
+    }
+    
 }

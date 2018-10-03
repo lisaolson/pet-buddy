@@ -173,7 +173,6 @@
                     <connections>
                         <outlet property="emailField" destination="MD2-bF-M2r" id="KJb-1C-HqL"/>
                         <outlet property="passwordField" destination="LhY-Tx-BQ6" id="P7M-PH-Ck2"/>
-                        <segue destination="rac-vl-6fh" kind="show" identifier="goToFeed" id="Ze5-qp-cWp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NG2-LO-0tj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -398,7 +397,7 @@
         <!--Feed View Controller-->
         <scene sceneID="fB6-hx-Vfz">
             <objects>
-                <viewController id="cYP-O0-mFK" customClass="FeedViewController" customModule="petBuddy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FeedViewController" id="cYP-O0-mFK" customClass="FeedViewController" customModule="petBuddy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dPb-Dq-B5Y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -415,17 +414,58 @@
                                     <segue destination="mp9-o8-nPG" kind="presentation" id="s2v-RO-lCB"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="niR-o1-J6u">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tableView" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="niR-o1-J6u">
                                 <rect key="frame" x="0.0" y="55" width="375" height="563"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="xhb-60-AnI">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="feedCell" rowHeight="100" id="xhb-60-AnI" customClass="FeedCell" customModule="petBuddy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xhb-60-AnI" id="GQk-Ys-WeO">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="watercolor" translatesAutoresizingMaskIntoConstraints="NO" id="goa-Tu-3oP">
+                                                    <rect key="frame" x="10" y="24" width="50" height="52"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="0pK-Wj-Sli"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="UH4-7x-mS8"/>
+                                                        <constraint firstAttribute="width" constant="50" id="aAx-M3-4DK"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sEI-nM-IMw">
+                                                    <rect key="frame" x="70" y="21" width="280" height="67"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="lisa@olson.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWl-oh-8pL">
+                                                            <rect key="frame" x="0.0" y="0.0" width="280" height="47"/>
+                                                            <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
+                                                            <color key="textColor" red="0.56347881929999999" green="0.52986852380000005" blue="0.73826433280000003" alpha="0.80056720889999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="contentLbl" text="Words and Things" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="QOV-aT-aeF">
+                                                            <rect key="frame" x="0.0" y="57" width="280" height="10"/>
+                                                            <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="10"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="goa-Tu-3oP" secondAttribute="bottom" constant="13" id="CT6-cB-naT"/>
+                                                <constraint firstItem="goa-Tu-3oP" firstAttribute="top" secondItem="GQk-Ys-WeO" secondAttribute="topMargin" constant="13" id="EKT-Px-ZUi"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="sEI-nM-IMw" secondAttribute="bottom" constant="1" id="Gka-Ra-69z"/>
+                                                <constraint firstItem="sEI-nM-IMw" firstAttribute="leading" secondItem="goa-Tu-3oP" secondAttribute="trailing" constant="10" id="MgZ-Wt-8Ui"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="sEI-nM-IMw" secondAttribute="trailing" constant="10" id="Ral-YM-HhN"/>
+                                                <constraint firstItem="sEI-nM-IMw" firstAttribute="top" secondItem="GQk-Ys-WeO" secondAttribute="topMargin" constant="10" id="pGa-h1-z0J"/>
+                                                <constraint firstItem="goa-Tu-3oP" firstAttribute="leading" secondItem="GQk-Ys-WeO" secondAttribute="leading" constant="10" id="v8d-cw-aoT"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="contentLbl" destination="QOV-aT-aeF" id="J5D-mh-AxH"/>
+                                            <outlet property="emailLbl" destination="HWl-oh-8pL" id="4NN-ww-tnc"/>
+                                            <outlet property="profileImage" destination="goa-Tu-3oP" id="Qez-Ye-cWu"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -442,6 +482,9 @@
                         <viewLayoutGuide key="safeArea" id="yGM-5J-btE"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="doghouse" selectedImage="doghouse" id="4fH-h3-gc9"/>
+                    <connections>
+                        <outlet property="tableView" destination="niR-o1-J6u" id="lg9-hw-vNj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3KL-zC-dce" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -16,6 +16,8 @@
 		4934BEAC215D5FA2009DD717 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4934BEAA215D5FA2009DD717 /* LaunchScreen.storyboard */; };
 		4934BEB4215D60DB009DD717 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4934BEB3215D60DB009DD717 /* GoogleService-Info.plist */; };
 		49688D462164326700344FF8 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49688D452164326700344FF8 /* CreatePostViewController.swift */; };
+		49688D482164410200344FF8 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49688D472164410200344FF8 /* FeedCell.swift */; };
+		49688D4A216442CA00344FF8 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49688D49216442CA00344FF8 /* Message.swift */; };
 		49A5F00221603784000D77C1 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A5F00121603784000D77C1 /* DataService.swift */; };
 		49A5F00421604355000D77C1 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A5F00321604355000D77C1 /* AuthService.swift */; };
 		49A5F0062160504C000D77C1 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A5F0052160504C000D77C1 /* FeedViewController.swift */; };
@@ -40,6 +42,8 @@
 		4934BEAD215D5FA2009DD717 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4934BEB3215D60DB009DD717 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		49688D452164326700344FF8 /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
+		49688D472164410200344FF8 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		49688D49216442CA00344FF8 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		49A5F00121603784000D77C1 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		49A5F00321604355000D77C1 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		49A5F0052160504C000D77C1 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 				4934BEA5215D5FA0009DD717 /* Main.storyboard */,
 				4934BEA8215D5FA2009DD717 /* Assets.xcassets */,
 				4934BEAA215D5FA2009DD717 /* LaunchScreen.storyboard */,
+				49688D472164410200344FF8 /* FeedCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -140,6 +145,7 @@
 			children = (
 				49E27910215EDE260090D9CE /* Doggo.swift */,
 				49E27912215F25180090D9CE /* User.swift */,
+				49688D49216442CA00344FF8 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -291,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49B696CC2161CD4D00E80566 /* MeViewController.swift in Sources */,
+				49688D482164410200344FF8 /* FeedCell.swift in Sources */,
 				4921760E216072C700172CF0 /* LoginViewController.swift in Sources */,
 				491C1D9E2163FDE400CF0897 /* AddViewController.swift in Sources */,
 				49E27911215EDE260090D9CE /* Doggo.swift in Sources */,
@@ -302,6 +309,7 @@
 				49A5F00221603784000D77C1 /* DataService.swift in Sources */,
 				49688D462164326700344FF8 /* CreatePostViewController.swift in Sources */,
 				49A5F0062160504C000D77C1 /* FeedViewController.swift in Sources */,
+				49688D4A216442CA00344FF8 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
