@@ -24,7 +24,7 @@ class FeedViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         DataService.instance.getAllFeedMessages { (returnedMessagesArray) in
-            self.messageArray = returnedMessagesArray
+            self.messageArray = returnedMessagesArray.reversed()
             self.tableView.reloadData()
         }
     }
@@ -47,8 +47,9 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
         // grabs every item in the entier message array based on the row of the table view
         let message = messageArray[indexPath.row]
         
+        DataService.instance.getUserName(forUID: message.senderId) { (returnedUsername) in
         cell.configureCell(profileImage: image!, email: message.senderId, content: message.content)
-        
+        }
         return cell
     }
 }

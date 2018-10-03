@@ -18,9 +18,10 @@ class MeViewController: UIViewController {
     }
     
     @IBAction func logoutButtonPressed(_ sender: Any) {
-        let firebaseAuth = Auth.auth()
         do {
-            try firebaseAuth.signOut()
+            try Auth.auth().signOut()
+            let authVC = storyboard?.instantiateViewController(withIdentifier: "AuthViewController") as? AuthViewController
+            self.present(authVC!, animated: true, completion: nil)
             print("!! SUCCESSFULLY LOGGED OUT !!")
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)

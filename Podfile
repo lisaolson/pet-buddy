@@ -9,8 +9,12 @@ target 'petBuddy' do
 
 pod 'Firebase'
 pod 'Firebase/Core'
+pod 'Firebase/Storage'
 pod 'Firebase/Database'
 pod 'Firebase/Auth'
 pod 'SVProgressHUD'
+pod 'GooglePlaces'
+pod 'GooglePlacePicker'
+pod 'GoogleMaps'
 
 end

@@ -23,6 +23,7 @@
 		49A5F0062160504C000D77C1 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A5F0052160504C000D77C1 /* FeedViewController.swift */; };
 		49A5F00821605058000D77C1 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A5F00721605058000D77C1 /* GroupsViewController.swift */; };
 		49B696CC2161CD4D00E80566 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B696CB2161CD4D00E80566 /* MeViewController.swift */; };
+		49B998622165562B00A60094 /* CellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B998612165562B00A60094 /* CellViewController.swift */; };
 		49E27911215EDE260090D9CE /* Doggo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E27910215EDE260090D9CE /* Doggo.swift */; };
 		49E27913215F25180090D9CE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E27912215F25180090D9CE /* User.swift */; };
 		AF9E3656DF56D36575902CF6 /* Pods_petBuddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E07259AF554C136B8B79957 /* Pods_petBuddy.framework */; };
@@ -49,6 +50,7 @@
 		49A5F0052160504C000D77C1 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		49A5F00721605058000D77C1 /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
 		49B696CB2161CD4D00E80566 /* MeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		49B998612165562B00A60094 /* CellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewController.swift; sourceTree = "<group>"; };
 		49E27910215EDE260090D9CE /* Doggo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doggo.swift; sourceTree = "<group>"; };
 		49E27912215F25180090D9CE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7AF4EAFD62C219442A3FBB0E /* Pods-petBuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petBuddy.release.xcconfig"; path = "Pods/Target Support Files/Pods-petBuddy/Pods-petBuddy.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				49B696CB2161CD4D00E80566 /* MeViewController.swift */,
 				491C1D9D2163FDE400CF0897 /* AddViewController.swift */,
 				49688D452164326700344FF8 /* CreatePostViewController.swift */,
+				49B998612165562B00A60094 /* CellViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				4934BE9B215D5FA0009DD717 /* Frameworks */,
 				4934BE9C215D5FA0009DD717 /* Resources */,
 				BD779C8B08C0525D7545F1F0 /* [CP] Embed Pods Frameworks */,
+				CFDC212D29D480CA0A68E0D4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -267,6 +271,32 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-petBuddy/Pods-petBuddy-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CFDC212D29D480CA0A68E0D4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-petBuddy/Pods-petBuddy-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlacePicker.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-petBuddy/Pods-petBuddy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F77CFCD94DE5799194E4FB5A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -296,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49B998622165562B00A60094 /* CellViewController.swift in Sources */,
 				49B696CC2161CD4D00E80566 /* MeViewController.swift in Sources */,
 				49688D482164410200344FF8 /* FeedCell.swift in Sources */,
 				4921760E216072C700172CF0 /* LoginViewController.swift in Sources */,
