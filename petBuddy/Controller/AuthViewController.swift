@@ -8,12 +8,18 @@
 
 import UIKit
 
+
 class AuthViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+    }
+    
     @IBAction func facebookLoginPressed(_ sender: Any) {
     }
     

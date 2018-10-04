@@ -43,12 +43,12 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "feedCell") as? FeedCell else
         { return UITableViewCell() }
-        let image = UIImage(named: "watercolor")
-        // grabs every item in the entier message array based on the row of the table view
+        let image = UIImage(named: "hahahah")
+        // grabs every item in the entire message array based on the row of the table view
         let message = messageArray[indexPath.row]
         
-        DataService.instance.getUserName(forUID: message.senderId) { (returnedUsername) in
-        cell.configureCell(profileImage: image!, email: message.senderId, content: message.content)
+        DataService.instance.getUsername(forUID: message.senderId) { (returnedUsername) in
+            cell.configureCell(profileImage: image!, email: returnedUsername, content: message.content)
         }
         return cell
     }

@@ -11,10 +11,15 @@ import Firebase
 
 class MeViewController: UIViewController {
 
+    @IBOutlet weak var emailLbl: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.emailLbl.text = Auth.auth().currentUser?.email
     }
     
     @IBAction func logoutButtonPressed(_ sender: Any) {
@@ -27,7 +32,5 @@ class MeViewController: UIViewController {
             print ("Error signing out: %@", signOutError)
         }
     }
-    
-    
-    
+
 }
