@@ -8,7 +8,8 @@ iOS app targetting dog owners who can match up their dogs with other lonely dogs
 
 ### Installation
 git clone the directory
-```git clone https://github.com/lisaolson/[Project Directory]```
+
+```git clone git@github.com:lisaolson/pet-buddy.git```
 
 ### Usage
 ```open -a Xcode petBuddy.xcworkspace```
