@@ -1,5 +1,5 @@
 # petBuddy
-Mobile app targetting dog owners who can match up their dogs with other lonely dogs near them so their dogs don't have to be home alone. 
+iOS app targetting dog owners who can match up their dogs with other lonely dogs near them so their dogs don't have to be home alone. 
 
 ### Tech Stack
 - Xcode 9.0
