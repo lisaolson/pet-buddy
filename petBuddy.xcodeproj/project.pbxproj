@@ -19,10 +19,11 @@
 		49688D462164326700344FF8 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49688D452164326700344FF8 /* CreatePostViewController.swift */; };
 		49688D482164410200344FF8 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49688D472164410200344FF8 /* FeedCell.swift */; };
 		49688D4A216442CA00344FF8 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49688D49216442CA00344FF8 /* Message.swift */; };
+		496B7F782166E48B0032CDD4 /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496B7F772166E48B0032CDD4 /* MessageTableViewController.swift */; };
+		496B7F7A21670CD90032CDD4 /* SingleMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496B7F7921670CD90032CDD4 /* SingleMessageViewController.swift */; };
 		49A5F00221603784000D77C1 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A5F00121603784000D77C1 /* DataService.swift */; };
 		49A5F00421604355000D77C1 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A5F00321604355000D77C1 /* AuthService.swift */; };
 		49A5F0062160504C000D77C1 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A5F0052160504C000D77C1 /* FeedViewController.swift */; };
-		49A5F00821605058000D77C1 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A5F00721605058000D77C1 /* GroupsViewController.swift */; };
 		49B696CC2161CD4D00E80566 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B696CB2161CD4D00E80566 /* MeViewController.swift */; };
 		49DA0D062165A18400388E55 /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DA0D052165A18400388E55 /* PostDetailsViewController.swift */; };
 		49E27911215EDE260090D9CE /* Doggo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E27910215EDE260090D9CE /* Doggo.swift */; };
@@ -43,10 +44,11 @@
 		49688D452164326700344FF8 /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
 		49688D472164410200344FF8 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		49688D49216442CA00344FF8 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		496B7F772166E48B0032CDD4 /* MessageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
+		496B7F7921670CD90032CDD4 /* SingleMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleMessageViewController.swift; sourceTree = "<group>"; };
 		49A5F00121603784000D77C1 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		49A5F00321604355000D77C1 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		49A5F0052160504C000D77C1 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
-		49A5F00721605058000D77C1 /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
 		49B696CB2161CD4D00E80566 /* MeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		49DA0D052165A18400388E55 /* PostDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewController.swift; sourceTree = "<group>"; };
 		49E27910215EDE260090D9CE /* Doggo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doggo.swift; sourceTree = "<group>"; };
@@ -140,13 +142,14 @@
 			children = (
 				4934BEA1215D5FA0009DD717 /* AppDelegate.swift */,
 				49A5F0052160504C000D77C1 /* FeedViewController.swift */,
-				49A5F00721605058000D77C1 /* GroupsViewController.swift */,
 				4921760D216072C700172CF0 /* LoginViewController.swift */,
 				49285A6221616CFD0025A159 /* AuthViewController.swift */,
 				49B696CB2161CD4D00E80566 /* MeViewController.swift */,
 				491C1D9D2163FDE400CF0897 /* AddViewController.swift */,
 				49688D452164326700344FF8 /* CreatePostViewController.swift */,
 				49DA0D052165A18400388E55 /* PostDetailsViewController.swift */,
+				496B7F772166E48B0032CDD4 /* MessageTableViewController.swift */,
+				496B7F7921670CD90032CDD4 /* SingleMessageViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -305,9 +308,10 @@
 				491C1D9E2163FDE400CF0897 /* AddViewController.swift in Sources */,
 				49E27911215EDE260090D9CE /* Doggo.swift in Sources */,
 				49285A6321616CFD0025A159 /* AuthViewController.swift in Sources */,
+				496B7F7A21670CD90032CDD4 /* SingleMessageViewController.swift in Sources */,
 				4934BEA2215D5FA0009DD717 /* AppDelegate.swift in Sources */,
+				496B7F782166E48B0032CDD4 /* MessageTableViewController.swift in Sources */,
 				49A5F00421604355000D77C1 /* AuthService.swift in Sources */,
-				49A5F00821605058000D77C1 /* GroupsViewController.swift in Sources */,
 				49DA0D062165A18400388E55 /* PostDetailsViewController.swift in Sources */,
 				49E27913215F25180090D9CE /* User.swift in Sources */,
 				49A5F00221603784000D77C1 /* DataService.swift in Sources */,
